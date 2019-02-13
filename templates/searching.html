@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/style.css">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='buddy.ico') }}" type="image/x-icon">
+
+    </head>
+    <title>Search Record</title>
+    <a href="/">Go back to home page</a>
+    <body>
+    <div class="form">
+        <form action="{{ url_for('searchrec') }}" method="POST">
+            <h2>Search Page</h2>
+            <p>Look for records by using ID number, first name, last name, course name, course code or gender</p><br>
+            Enter information here:<br>
+            <input class="form-control" type="text" name = "data" required minlength="2" oninvalid="this.setCustomValidity('Required field. Do not leave blank')" oninput="setCustomValidity('')"/><br><br>
+            <input class="btn btn-success" type="submit" value="Search"/><br><br>
+            <input class="btn btn-primary" type="button" value="Back" onclick="window.location.href='/'">
+        </form>
+    </div>
+    </body>
+</html>

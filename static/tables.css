@@ -1,0 +1,54 @@
+.tables {
+  font-family:verdana, arial, sans-serif;
+  font-size:0.75em;
+  line-height:2em;
+  background: #23dddd;
+
+}
+
+h2 {
+    color:#010101;
+
+    font-size: 48px;
+    text-align: center;
+    margin-top: 3%;
+}
+
+body {
+    margin: 0;
+    background-color: lightblue;
+    background-image: url("mchristmas");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right bottom;
+
+}
+
+table {
+    overflow-x: auto;
+    overflow-y: auto;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+tbody {
+  overflow-y: scroll;
+  height: 320px;
+  width: 100%;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #9fa9ad;
+}
+
+thead {
+    background: #30b847;
+}
+

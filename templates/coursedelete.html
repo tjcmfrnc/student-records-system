@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/style.css">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='buddy.ico') }}" type="image/x-icon">
+
+    </head>
+    <title>Delete Course</title>
+    <a href="/">Go back to home page</a>
+    <body>
+    <div class="form">
+         <form action="{{ url_for('coursedel') }}" method="POST">
+             <h2>Enter course ID</h2>
+             <input class="form-control" type="text" name="cno" required minlength="1" maxlength="2" oninvalid="this.setCustomValidity('Invalid course ID')" oninput="setCustomValidity('')"/><br><br>
+             <input class="btn btn-success" type="submit" value="Delete" /><br><br>
+             <input class="btn btn-primary" type="button" value="Back" onclick="window.location.href='/'">
+         </form>
+    </div>
+    </body>
+</html>

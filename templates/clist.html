@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/tables.css">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='buddy.ico') }}" type="image/x-icon">
+
+    </head>
+    <title>Home Page</title>
+    <body>
+        <a href="/">Go back to home page</a>
+        <h2>Course Information: </h2>
+        <div class="tables">
+        <table>
+            <thead>
+            <tr>
+                <td>Course ID</td>
+                <td>Course Name</td>
+                <td>Course Code</td>
+            </tr>
+            </thead>
+
+            {% for row in rows%}
+                <tr>
+                    <td>{{row["cid"]}}</td>
+                    <td>{{row["coursename"]}}</td>
+                    <td>{{row["coursecode"]}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        </div>
+        <h2><a href="/"></a></h2>
+
+    </body>
+</html>

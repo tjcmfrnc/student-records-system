@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/style.css">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='buddy.ico') }}" type="image/x-icon">
+
+    </head>
+    <title>New Course</title>
+    <a href="/">Go back to home page</a>
+    <body>
+    <div class="form">
+        <form action="{{ url_for('courseadd') }}" method="POST">
+            <h3>Course Information</h3>
+            Course ID<br>
+            <input class="form-control" type="text" name = "cno" required minlength="1" maxlength="2" oninvalid="this.setCustomValidity('Required field')" oninput="setCustomValidity('')"/><br>
+
+            Course Name<br>
+            <input class="form-control" type="text" name = "cname" required minlength="8" maxlength="20" oninvalid="this.setCustomValidity('Invalid course name')" oninput="setCustomValidity('')"/><br>
+
+            Course Code<br>
+            <input class="form-control" type="text" name = "cc" required minlength="4" maxlength="6" oninvalid="this.setCustomValidity('Invalid course code')" oninput="setCustomValidity('')"/><br><br>
+
+            <input class="btn btn-success" type="submit" value="Add" /><br><br>
+            <input class="btn btn-primary" type="button" value="Back" onclick="window.location.href='/'">
+        </form>
+    </div>
+    </body>
+</html>

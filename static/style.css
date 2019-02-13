@@ -1,0 +1,77 @@
+h2 {
+    color:#2B3856;
+    text-align: center;
+    font-size: 45px;
+}
+
+li a{
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+
+li a:hover:not(.active) {
+    background-color: turquoise;
+    color: white;
+    text-decoration: none;
+}
+
+
+ul {
+    color:#2B3856;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+
+}
+
+body {
+    margin: 0;
+    background-color: lightblue;
+    background-image: url("mchristmas");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right bottom;
+
+}
+.par {
+    float: left;
+    margin-left: 250px;
+    font-weight: bold;
+    font-size: 25px
+}
+
+.form {
+    display: block;
+    text-align: center;
+    margin-top: 3%;
+
+}
+
+form
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.head1{
+    background-color:  #9fa9ad;
+    padding: 20px;
+}
+
+p {
+    margin-top: 5%;
+}
+
+.results {
+    margin-top: 15%;
+}

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/style.css">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='buddy.ico') }}" type="image/x-icon">
+    </head>
+    <title>New Student</title>
+    <a href="/">Go back to home page</a>
+    <body>
+
+    <div class="message">
+        <h5>{{ msg }}</h5>
+    </div>
+        <div class="form">
+        <form action="{{ url_for('addrec') }}" method="POST">
+
+            <h2>Student Information</h2>
+            ID number<br>
+            <input class="form-control" type="text" name = "id" required minlength="9" maxlength="9" placeholder="ID no." oninvalid="this.setCustomValidity('Enter valid ID (ex. 2015-0001)')" oninput="setCustomValidity('')"/><br>
+
+            First Name<br>
+            <input class="form-control" type="text" name = "fn" required minlength="4" placeholder="First Name" oninvalid="this.setCustomValidity('Minimum of 5 characters')" oninput="setCustomValidity('')"/><br>
+
+            Middle Name<br>
+            <input class="form-control" type="text" name = "mn" required minlength="4" placeholder="Middle Name" oninvalid="this.setCustomValidity('Minimum of 5 characters')" oninput="setCustomValidity('')"/><br>
+
+            Last Name<br>
+            <input class="form-control" type="text" name = "ln" required minlength="2" placeholder="Last Name" oninvalid="this.setCustomValidity('Minimum of 2 characters')" oninput="setCustomValidity('')"/><br>
+
+            Sex<br>
+            <input class="form-control" type="text" name = "sex" placeholder="Sex" required minlength="4" maxlength="6" oninvalid="this.setCustomValidity('Do not leave blank')" oninput="setCustomValidity('')"/><br>
+
+            Course ID<br>
+            <input class="form-control" type="text" name = "cid" placeholder="CID" required minlength="1" maxlength="2" oninvalid="this.setCustomValidity('Invalid CID')" oninput="setCustomValidity('')"/><br><br>
+            <input class="btn btn-success" type="submit" value="Add" /><br><br>
+            <input class="btn btn-primary" type="button" value="Back" onclick="window.location.href='/'">
+        </form>
+    </div>
+    </body>
+</html>
