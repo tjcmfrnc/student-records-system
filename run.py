@@ -5,13 +5,13 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 conn = sql.connect('testbase2.db')
-print "db opened"
+print ("db opened")
 
 conn.execute('CREATE TABLE IF NOT EXISTS students (idno TEXT PRIMARY KEY, firstname TEXT, middlename TEXT, lastname TEXT, sex TEXT, courseid INTEGER, FOREIGN KEY(courseid) REFERENCES courses(cid) ON DELETE CASCADE ON UPDATE CASCADE)')
 conn.execute('CREATE TABLE IF NOT EXISTS courses (cid INTEGER PRIMARY KEY, coursename TEXT, coursecode TEXT)')
 
 
-print "table created"
+print ("table created")
 conn.close()
 
 
@@ -54,7 +54,7 @@ def addrec():
                 cur1 = con.cursor()
                 cur1.execute("SELECT * FROM courses WHERE cid = ? ", (cid,))
                 query = cur1.fetchone()
-                print query
+                print (query)
                 if query is None:
                     msg='Course does not exist!'
                 else:
